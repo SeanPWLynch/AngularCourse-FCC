@@ -21,15 +21,18 @@ console.log(numList);
 console.log(filterResult);
 let sum = numList.reduce((acc, num) => acc + num);
 console.log(sum);
-var Colour;
-(function (Colour) {
-    Colour[Colour["Red"] = 0] = "Red";
-    Colour[Colour["Green"] = 1] = "Green";
-    Colour[Colour["Blue"] = 2] = "Blue";
-})(Colour || (Colour = {}));
-let testRed = Colour.Red;
-let testGreen = Colour.Green;
-let testBlue = Colour.Blue;
+let testRed = 0 /* Red */;
+let testGreen = 1 /* Green */;
+let testBlue = 2 /* Blue */;
 console.log(testRed);
 console.log(testGreen);
 console.log(testBlue);
+let numberThuple;
+function swapNumbers(num1, num2) {
+    return [num2, num1];
+}
+numberThuple = swapNumbers(1, 2);
+console.log(numberThuple[1]);
+let department;
+department = "string value";
+department = 100;

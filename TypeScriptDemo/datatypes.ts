@@ -42,7 +42,7 @@ let sum = numList.reduce((acc,num) => acc+num);
 
 console.log(sum);
 
-enum Colour {
+const enum Colour {
     Red,
     Green,
     Blue
@@ -55,3 +55,18 @@ let testBlue = Colour.Blue;
 console.log(testRed);
 console.log(testGreen);
 console.log(testBlue);
+
+let numberThuple : [firstNumber : number, secondNumber: number];
+
+function swapNumbers(num1: number, num2: number) : [number,number] {
+    return [num2,num1]
+}
+
+numberThuple = swapNumbers(1,2);
+
+console.log(numberThuple[1])
+
+let department : any;
+
+department = "string value";
+department = 100;
