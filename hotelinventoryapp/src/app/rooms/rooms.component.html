@@ -18,6 +18,7 @@
       <th>Photo</th>
       <th>Check In</th>
       <th>Check Out</th>
+      <th>Rating</th>
     </tr>
     <tr
       [ngClass]="e ? 'even' : 'odd'"
@@ -31,6 +32,7 @@
       <td><img src="{{ room.photos }}" style="width: 400px" /></td>
       <td>{{ room.checkInTime | date : 'short' }}</td>
       <td>{{ room.checkOutTime | date : 'short' }}</td>
+      <td>{{ room.rating| number : 'en-us' }}</td>
     </tr>
   </table>
 </div>
