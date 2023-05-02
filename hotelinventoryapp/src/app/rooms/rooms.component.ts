@@ -79,7 +79,29 @@ export class RoomsComponent implements OnInit {
     totalRooms: 20,
   };
 
+  title : string = 'Room List';
+
   toggle() {
     this.hiderooms = !this.hiderooms;
+    this.title = 'Rooms List'
   }
-}
+
+  addRoom(){
+     const newRoom : RoomList = {
+        roomNumber: 5,
+        roomType: 'Deluxe Room',
+        amenities: 'Aircon, Wifi ,TV, Bathroom, Kitchen',
+        price: 1000,
+        photos:
+          'https://assets-global.website-files.com/5c6d6c45eaa55f57c6367749/624b471bdf247131f10ea14f_61d31b8dbff9b500cbd7ed32_types_of_rooms_in_a_5-star_hotel_2_optimized_optimized.jpeg',
+        checkInTime: new Date('17-April-2023'),
+        checkOutTime: new Date('18-April-2023'),
+        rating: 4.4,
+      }
+
+      this.roomList = [...this.roomList,newRoom]
+
+    }
+
+
+  }

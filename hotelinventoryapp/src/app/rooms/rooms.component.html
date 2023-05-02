@@ -6,10 +6,14 @@
   {{selectedRoom | json}}
 </div>
 
+<div>
+  <button (click)="addRoom()">Add Room</button>
+</div>
+
 <div [hidden]="hiderooms">
   <div [ngStyle]="{ color: rooms.availableRooms > 0 ? 'green' : 'red' }">
     <p>Number of Rooms: {{ rooms.availableRooms }}</p>
-    <hinv-rooms-list [rooms]="roomList" (roomSelected)="selectRoom($event)" ></hinv-rooms-list>
+    <hinv-rooms-list [rooms]="roomList" [title]="title" (roomSelected)="selectRoom($event)" ></hinv-rooms-list>
   </div>
 
   <h3>Rooms List</h3>
