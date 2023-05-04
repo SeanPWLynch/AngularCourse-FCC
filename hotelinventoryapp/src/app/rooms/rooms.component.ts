@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   DoCheck,
+  OnDestroy,
   OnInit,
   QueryList,
   ViewChild,
@@ -33,11 +34,11 @@ export class RoomsComponent
   roomList: RoomList[] = [];
   constructor() {}
 
+
   ngAfterViewChecked(): void {
     this.headerComponent.title = 'Rooms View After View Checked';
-
-    console.log('After View Checked');
   }
+
   ngAfterViewInit(): void {
     this.headerComponent.title = 'Rooms View';
   }
@@ -110,7 +111,6 @@ export class RoomsComponent
 
   toggle() {
     this.hiderooms = !this.hiderooms;
-    this.title = 'Rooms List';
   }
 
   addRoom() {
