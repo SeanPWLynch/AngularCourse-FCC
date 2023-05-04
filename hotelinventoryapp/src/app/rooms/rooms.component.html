@@ -1,6 +1,8 @@
 <!-- <h1>Welcome to {{ hotelName }}</h1> -->
 
 <hinv-header></hinv-header>
+<hinv-header></hinv-header>
+<hinv-header></hinv-header>
 
 <button (click)="toggle()">Toggle</button>
 
@@ -14,7 +16,8 @@
 
 <div [hidden]="hiderooms">
   <div [ngStyle]="{ color: rooms.availableRooms > 0 ? 'green' : 'red' }">
-    <p>Number of Rooms: {{ rooms.availableRooms }}</p>
+    <p>Number of Rooms: {{ rooms.totalRooms }}</p>
+    <p>Available Rooms: {{ rooms.availableRooms }}</p>
     <hinv-rooms-list
       [rooms]="roomList"
       [title]="title"
