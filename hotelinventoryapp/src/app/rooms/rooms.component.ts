@@ -39,12 +39,7 @@ export class RoomsComponent
     console.log('After View Checked');
   }
   ngAfterViewInit(): void {
-    console.log(this.headerChildrenComponent)
-
-    this.headerChildrenComponent.forEach((headerComponent, index) => { headerComponent.title = `Header ${index + 1}`; });
-
     this.headerComponent.title = 'Rooms View';
-
   }
 
   ngDoCheck(): void {
