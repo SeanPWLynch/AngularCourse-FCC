@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
 import { RoomList } from '../rooms';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable(
+   {
+   providedIn: 'root',
+ }
+)
 export class RoomsService {
-  constructor() {}
+  constructor() {
+    console.log('RoomsService constructor called');
+  }
 
   roomList: RoomList[] = [
     {
